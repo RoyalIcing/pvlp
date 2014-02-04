@@ -1,3 +1,6 @@
 [submodule "libraries/glaze"]
 	path = libraries/glaze
 	url = https://github.com/BurntCaramel/glaze.git
+[submodule "libraries/stir"]
+	path = libraries/stir
+	url = https://github.com/BurntCaramel/stir.git
