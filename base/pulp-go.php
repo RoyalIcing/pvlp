@@ -40,9 +40,6 @@ define ('TIDAL_BASE_JS_URL', TIDAL_BASE_ASSETS_URL. 'js/');
 
 
 require_once(PULP_CODE_PATH. 'base/defines.php');
-
-
-require_once(PULP_CODE_PATH. 'defines.php');
 require_once(PULP_CODE_PATH_GLAZE);
 require_once(PULP_CODE_PATH_INFO);
 require_once(PULP_CODE_PATH_CACHE);
