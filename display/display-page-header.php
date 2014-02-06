@@ -20,7 +20,7 @@ stir('header');
 <title><?php bloginfo('name'); ?> <?php wp_title(BURNT_ENDASH); ?></title>
 <link rel="icon"<?php glazyAttribute('href', PULP_FAVICON_URL); ?> type="image/x-icon">
 <meta name="viewport" content="width=device-width">
-<link type="text/css" rel="stylesheet"<?php glazyAttribute('href', PULP_BASE_CSS_URL. 'infinitylist/infinitylist.css?ver=' .(WEBSITE_VERSION . WEBSITE_STYLESHEET_REVISION)); ?>>
+<link type="text/css" rel="stylesheet"<?php glazyAttribute('href', PULP_BASE_CSS_URL. PULP_ASSETS_ID. '/' .PULP_ASSETS_ID. '.css?ver=' .(WEBSITE_VERSION . WEBSITE_STYLESHEET_REVISION)); ?>>
 <?php
 if (defined('PULP_FACEBOOK_APP_ID')):
 ?>

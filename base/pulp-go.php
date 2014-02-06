@@ -28,13 +28,13 @@ endif;
 
 
 // Assets base URL
-define ('TIDAL_BASE_ASSETS_URL', TIDAL_BASE_URL. (TIDAL_SITE_TESTING ? 'assets/dev/' : 'assets/prod/'));
+define ('PULP_BASE_ASSETS_URL', PULP_BASE_URL. (PULP_SITE_TESTING ? 'assets/dev/' : 'assets/prod/'));
 
 // CSS URL
-define ('TIDAL_BASE_CSS_URL', TIDAL_BASE_ASSETS_URL. 'css/');
+define ('PULP_BASE_CSS_URL', PULP_BASE_ASSETS_URL. 'css/');
 
 // JS URL
-define ('TIDAL_BASE_JS_URL', TIDAL_BASE_ASSETS_URL. 'js/');
+define ('PULP_BASE_JS_URL', PULP_BASE_ASSETS_URL. 'js/');
 
 
 
@@ -49,3 +49,4 @@ require_once(PULP_CODE_PATH_INIT);
 require_once(PULP_CODE_PATH_QUERY);
 require_once(PULP_CODE_PATH_DISPLAY_BASE);
 require_once(PULP_CODE_PATH_DISPLAY_SECTION);
+require_once(PULP_CODE_PATH_DISPLAY_SHORTCODE);

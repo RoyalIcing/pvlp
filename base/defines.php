@@ -18,6 +18,7 @@ define ('PULP_CODE_PATH_CACHE', PULP_CODE_PATH. 'cache.php');
 define ('PULP_CODE_PATH_DISPLAY_BASE', PULP_CODE_PATH. 'display/display-base.php');
 define ('PULP_CODE_PATH_DISPLAY_MENU', PULP_CODE_PATH. 'display/display-menu.php');
 define ('PULP_CODE_PATH_DISPLAY_SECTION', PULP_CODE_PATH. 'display/display-section.php');
+define ('PULP_CODE_PATH_DISPLAY_SHORTCODE', PULP_CODE_PATH. 'display/display-shortcode.php');
 
 define ('PULP_CODE_PATH_DISPLAY_PAGE_HEADER', PULP_CODE_PATH. 'display/display-page-header.php');
 define ('PULP_CODE_PATH_DISPLAY_PAGE_FOOTER', PULP_CODE_PATH. 'display/display-page-footer.php');

@@ -16,7 +16,7 @@ stirring('footer', 'banner');
 <div id="footer">
 <?php
 if (defined('PULP_COPYRIGHT_MESSAGE')):
-	glazyElement('h6.copyright.class', PULP_COPYRIGHT_MESSAGE);
+	glazyElement('h6.copyright', PULP_COPYRIGHT_MESSAGE);
 endif;
 
 require_once (PULP_CODE_PATH_DISPLAY_MENU);
