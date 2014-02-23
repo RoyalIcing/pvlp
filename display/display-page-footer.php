@@ -1,9 +1,12 @@
 <?php
 /*
 
+Pulp
 Copyright 2014 Patrick Smith
 
 */
+
+$pageDisplayer = PulpPageDisplayer::getCurrentPageDisplayer();
 
 stir('footer');
 ?>
@@ -13,17 +16,30 @@ stir('footer');
 stirring('footer', 'banner');
 
 ?>
-<div id="footer">
+<footer id="footer">
+<div class="content">
 <?php
 if (defined('PULP_COPYRIGHT_MESSAGE')):
 	glazyElement('h6.copyright', PULP_COPYRIGHT_MESSAGE);
 endif;
 
-require_once (PULP_CODE_PATH_DISPLAY_MENU);
-pulpDisplayMenuNavigation('legalsMenu', 'legalsMenu', 'h6');
-stirring('footer', 'legals menu');
+if (false):
+	require_once (PULP_CODE_PATH_DISPLAY_MENU);
+	pulpDisplayMenuNavigation('legalsMenu', 'legalsMenu', 'h6');
+	stirring('footer', 'legals menu');
+endif;
+
+if (true):
+	$mainNavigation = glazyBegin('nav#footerNavigation');
+	{
+		$pageDisplayer->displayFooterMenuContents();
+	}
+	glazyClose($mainNavigation);
+	stirring('header', 'main navigation');
+endif;
 ?>
 </div>
+</footer>
 <?php
 wp_footer();
 stirring('footer', 'wp_footer');

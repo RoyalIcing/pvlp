@@ -72,15 +72,16 @@ function pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
 	
 	$title = $menuItem->title;
 	$url = $menuItem->url;
-	$class = 'menuItem-'.pulpShortenNameToProperNameSlug($title);
+	$classes = array('menuItem-'.pulpShortenNameToProperNameSlug($title));
 	if (!empty($queriedObjectID)):
 		$currentItem = (( $menuItem->object_id == $queriedObjectID) && (($wp_query->is_singular() && $menuItem->type == 'post_type') || ($wp_query->is_category() && $menuItem->object == 'category' )));
 		$currentCategory = ($wp_query->is_single || $wp_query->is_page) && ($menuItem->object == 'category') && (in_category($menuItem->object_id, $queriedObjectID));
 		
 		if ($currentItem)
-			$class .= ' current-item';
+			$classes[] = 'current-item';
+		
 		if ($currentCategory)
-			$class .= ' current-category';
+			$classes[] = 'current-category';
 	endif;
 	
 ?>
@@ -88,7 +89,7 @@ function pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
 	if (!empty($mapMenuIDToSubmenus[$menuItem->ID])):
 ?>
 
-<ul class="menu">
+<ul class="menu submenu">
 <?php
 		foreach ($mapMenuIDToSubmenus[$menuItem->ID] as $submenu):
 			pulpDisplayMenuItem($submenu, $mapMenuIDToSubmenus, $tag);
