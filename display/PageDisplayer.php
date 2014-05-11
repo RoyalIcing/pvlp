@@ -6,10 +6,10 @@ Copyright 2014 Patrick Smith
 */
 
 
-define ('PULP_PAGE_ID_META_KEY', 'pulp-page-id');
+define ('PVLP_PAGE_ID_META_KEY', 'pvlp-page-id');
 
 
-class PulpPageDisplayer
+class PvlpPageDisplayer
 {
 	function __construct()
 	{
@@ -21,15 +21,15 @@ class PulpPageDisplayer
 	
 	public function makeCurrentPageDisplayer()
 	{
-		global $PulpPageDisplayer_current;
+		global $PvlpPageDisplayer_current;
 		
-		$PulpPageDisplayer_current = $this;
+		$PvlpPageDisplayer_current = $this;
 	}
 	
 	public static function getCurrentPageDisplayer()
 	{
-		global $PulpPageDisplayer_current;
-		return $PulpPageDisplayer_current;
+		global $PvlpPageDisplayer_current;
+		return $PvlpPageDisplayer_current;
 	}
 	
 	
@@ -84,12 +84,12 @@ class PulpPageDisplayer
 			/*echo '<script type="text/javascript" src="'. $themeBase.'/js/head.load.min.js"></script>'."\n";
 			echo '<script type="text/javascript">head.js('. implode(",\n", $scripts). ');</script>'."\n";*/
 ?>
-<script type="text/javascript"<?php glazyAttribute('src', PULP_BASE_JS_URL. 'modernizr.custom.140223.js'); ?>></script>
+<script type="text/javascript"<?php glazyAttribute('src', PVLP_BASE_JS_URL. 'modernizr.custom.140223.js'); ?>></script>
 <script type="text/javascript">
 Modernizr.load({
 	load:[<?= implode(",\n", $scripts); ?>],
 	complete: function() {
-		if (window.pulpCompletedLoading) pulpCompletedLoading();
+		if (window.pvlpCompletedLoading) pvlpCompletedLoading();
 	}
 });
 </script>
@@ -108,8 +108,8 @@ Modernizr.load({
 	
 	public function displayMainMenuContents()
 	{
-		require_once(PULP_CODE_PATH_DISPLAY_MENU);
-		pulpDisplayMenuNavigation('main', 'mainMenu');
+		require_once(PVLP_CODE_PATH_DISPLAY_MENU);
+		pvlpDisplayMenuNavigation('main', 'mainMenu');
 	}
 	
 	public function displayPageFooter()
@@ -171,7 +171,7 @@ Modernizr.load({
 	{
 		$foundPosts = get_posts(array(
 			'post_type' => 'page',
-			'meta_key' => PULP_PAGE_ID_META_KEY,
+			'meta_key' => PVLP_PAGE_ID_META_KEY,
 			'meta_value' => $pageID
 		));
 		

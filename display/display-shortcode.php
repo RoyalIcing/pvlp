@@ -16,18 +16,18 @@ add_filter('the_content', 'shortcode_unautop', 100);
 
 
 /* Register Shortcodes */
-add_shortcode('buttons_aside', 'pulpShortcodeButtonsAside');
-add_shortcode('button', 'pulpShortcodeButton');
+add_shortcode('buttons_aside', 'pvlpShortcodeButtonsAside');
+add_shortcode('button', 'pvlpShortcodeButton');
 
-add_shortcode('item', 'pulpShortcodeItem');
+add_shortcode('item', 'pvlpShortcodeItem');
 
-add_shortcode('email_address_text', 'pulpShortcodeEmailAddressText');
-add_shortcode('email_button', 'pulpShortcodeEmailButton');
-
-
+add_shortcode('email_address_text', 'pvlpShortcodeEmailAddressText');
+add_shortcode('email_button', 'pvlpShortcodeEmailButton');
 
 
-function pulpBeginDisplayingButtonsAside($options = null)
+
+
+function pvlpBeginDisplayingButtonsAside($options = null)
 {
 	return glazyBegin(array(
 		'tagName' => 'aside',
@@ -36,7 +36,7 @@ function pulpBeginDisplayingButtonsAside($options = null)
 }
 
 
-function pulpShortcodeButtonsAside($shortcodeAttributes, $content = '')
+function pvlpShortcodeButtonsAside($shortcodeAttributes, $content = '')
 {
 	ob_start();
 	
@@ -51,7 +51,7 @@ function pulpShortcodeButtonsAside($shortcodeAttributes, $content = '')
 }
 
 
-function pulpShortcodeButton($shortcodeAttributes, $content = '')
+function pvlpShortcodeButton($shortcodeAttributes, $content = '')
 {
 	//glazyEnsureOpeningTagForLatestElementIsDisplayed();
 	
@@ -62,7 +62,7 @@ function pulpShortcodeButton($shortcodeAttributes, $content = '')
 	if (isset($shortcodeAttributes['href'])):
 		$href = $shortcodeAttributes['href'];
 	elseif (isset($shortcodeAttributes['section'])):
-		$href = pulpGetInPageURLToSectionWithID($shortcodeAttributes['section']);
+		$href = pvlpGetInPageURLToSectionWithID($shortcodeAttributes['section']);
 	else:
 		$href = '';
 	endif;
@@ -80,13 +80,13 @@ function pulpShortcodeButton($shortcodeAttributes, $content = '')
 }
 
 
-function pulpShortcodeItem($shortcodeAttributes, $content = '')
+function pvlpShortcodeItem($shortcodeAttributes, $content = '')
 {
 	ob_start();
 	
 	$shortcodeAttributes = shortcode_atts(array(
 		'class' => ''
-	), $shortcodeAttributes, 'pulp_item');
+	), $shortcodeAttributes, 'pvlp_item');
 	
 	$processedContent = do_shortcode(trim($content));
 	glazyElement(array_filter(array(
@@ -99,13 +99,13 @@ function pulpShortcodeItem($shortcodeAttributes, $content = '')
 }
 
 
-function pulpShortcodeEmailAddressText($shortcodeAttributes, $content = '')
+function pvlpShortcodeEmailAddressText($shortcodeAttributes, $content = '')
 {
 	ob_start();
 	
 	$shortcodeAttributes = shortcode_atts(array(
 		'class' => ''
-	), $shortcodeAttributes, 'pulp_email_address_text');
+	), $shortcodeAttributes, 'pvlp_email_address_text');
 	
 	$processedContent = do_shortcode(trim($content));
 	glazyElement(array_filter(array(
@@ -117,14 +117,14 @@ function pulpShortcodeEmailAddressText($shortcodeAttributes, $content = '')
 	return ob_get_clean();
 }
 
-function pulpShortcodeEmailButton($shortcodeAttributes, $content = '')
+function pvlpShortcodeEmailButton($shortcodeAttributes, $content = '')
 {
 	ob_start();
 	
 	$shortcodeAttributes = shortcode_atts(array(
 		'email_address' => '',
 		'class' => ''
-	), $shortcodeAttributes, 'pulp_email_button');
+	), $shortcodeAttributes, 'pvlp_email_button');
 	
 	$class = array('emailAddressButtonLink', 'buttonLink');
 	if (!empty($shortcodeAttributes['class'])) $class[] = $shortcodeAttributes['class'];

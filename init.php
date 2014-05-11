@@ -7,12 +7,14 @@ Copyright 2014 Patrick Smith
 
 
 
-add_action('init', 'pulpInit');
+add_action('init', 'pvlpInit');
 
 
-function pulpInit()
+function pvlpInit()
 {
-	do_action('pulpRegisterContentTypes');
+	do_action('pvlpRegisterContentTypes');
 	
-	do_action('pulpRegisterNavMenus');
+	do_action('pvlpRegisterNavMenus');
+	
+	do_action('pvlpRegisterThumbnailSizes');
 }

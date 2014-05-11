@@ -5,14 +5,14 @@ Copyright 2014 Patrick Smith
 
 */
 
-function pulpShortenNameToProperNameSlug($name)
+function pvlpShortenNameToProperNameSlug($name)
 {
 	$name = preg_replace('/[\/_ |+-]/', '-', $name);
 	$name = preg_replace('/-+/', '-', $name);
 	return $name;
 }
 
-function pulpDisplayMenuNavigation($menuName, $menuElementID = '', $tag = 'h2')
+function pvlpDisplayMenuNavigation($menuName, $menuElementID = '', $tag = 'h2')
 {
 	global $wp_query;
 	
@@ -54,7 +54,7 @@ function pulpDisplayMenuNavigation($menuName, $menuElementID = '', $tag = 'h2')
 <ul<?php glazyAttribute('id', $menuElementID); ?> class="menu">
 <?php
 		foreach ( (array)$baseMenuItems as $key => $menuItem ):
-			pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag);
+			pvlpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag);
 		endforeach;
 ?>
 </ul>
@@ -62,7 +62,7 @@ function pulpDisplayMenuNavigation($menuName, $menuElementID = '', $tag = 'h2')
 	endif;
 }
 
-function pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
+function pvlpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
 {
 	global $wp_query;
 	
@@ -72,7 +72,7 @@ function pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
 	
 	$title = $menuItem->title;
 	$url = $menuItem->url;
-	$classes = array('menuItem-'.pulpShortenNameToProperNameSlug($title));
+	$classes = array('menuItem-'.pvlpShortenNameToProperNameSlug($title));
 	if (!empty($queriedObjectID)):
 		$currentItem = (( $menuItem->object_id == $queriedObjectID) && (($wp_query->is_singular() && $menuItem->type == 'post_type') || ($wp_query->is_category() && $menuItem->object == 'category' )));
 		$currentCategory = ($wp_query->is_single || $wp_query->is_page) && ($menuItem->object == 'category') && (in_category($menuItem->object_id, $queriedObjectID));
@@ -92,7 +92,7 @@ function pulpDisplayMenuItem($menuItem, $mapMenuIDToSubmenus, $tag)
 <ul class="menu submenu">
 <?php
 		foreach ($mapMenuIDToSubmenus[$menuItem->ID] as $submenu):
-			pulpDisplayMenuItem($submenu, $mapMenuIDToSubmenus, $tag);
+			pvlpDisplayMenuItem($submenu, $mapMenuIDToSubmenus, $tag);
 		endforeach;
 ?>
 </ul>

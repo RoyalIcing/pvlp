@@ -6,13 +6,13 @@ Copyright 2014 Patrick Smith
 */
 
 
-function pulpGetInPageURLToSectionWithID($sectionID)
+function pvlpGetInPageURLToSectionWithID($sectionID)
 {
 	return '#section-' .$sectionID;
 }
 
 
-function pulpGetAllPostsOfTypeInCustomCategoryWithSlug($postType, $categoryType, $categorySlug)
+function pvlpGetAllPostsOfTypeInCustomCategoryWithSlug($postType, $categoryType, $categorySlug)
 {
 	return get_posts(array(
 		'post_type' => $postType,

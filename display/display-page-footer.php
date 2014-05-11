@@ -1,12 +1,12 @@
 <?php
 /*
 
-Pulp
+Pvlp
 Copyright 2014 Patrick Smith
 
 */
 
-$pageDisplayer = PulpPageDisplayer::getCurrentPageDisplayer();
+$pageDisplayer = PvlpPageDisplayer::getCurrentPageDisplayer();
 
 stir('footer');
 ?>
@@ -19,13 +19,13 @@ stirring('footer', 'banner');
 <footer id="footer">
 <div class="content">
 <?php
-if (defined('PULP_COPYRIGHT_MESSAGE')):
-	glazyElement('h6.copyright', PULP_COPYRIGHT_MESSAGE);
+if (defined('PVLP_COPYRIGHT_MESSAGE')):
+	glazyElement('h6.copyright', PVLP_COPYRIGHT_MESSAGE);
 endif;
 
 if (false):
-	require_once (PULP_CODE_PATH_DISPLAY_MENU);
-	pulpDisplayMenuNavigation('legalsMenu', 'legalsMenu', 'h6');
+	require_once (PVLP_CODE_PATH_DISPLAY_MENU);
+	pvlpDisplayMenuNavigation('legalsMenu', 'legalsMenu', 'h6');
 	stirring('footer', 'legals menu');
 endif;
 

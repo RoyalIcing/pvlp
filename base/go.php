@@ -1,7 +1,7 @@
 <?php
 /*
 
-Pulp
+Pvlp
 Copyright 2014 Patrick Smith
 
 */
@@ -10,46 +10,46 @@ Copyright 2014 Patrick Smith
 /*** !Paths ***/
 
 if (true):
-	define ('PULP_BASE_PATH', trailingslashit( TEMPLATEPATH ));
+	define ('PVLP_BASE_PATH', trailingslashit( TEMPLATEPATH ));
 else:
-	define ('PULP_BASE_PATH', plugin_dir_path( dirname(__FILE__) )); // Inside 'code' folder, so go up one folder.
+	define ('PVLP_BASE_PATH', plugin_dir_path( dirname(__FILE__) )); // Inside 'code' folder, so go up one folder.
 endif;
 
-define ('PULP_CODE_PATH', PULP_BASE_PATH. 'pulp-code/');
+define ('PVLP_CODE_PATH', PVLP_BASE_PATH. 'pvlp/');
 
 
 /*** !URLs ***/
 
 if (true):
-	define ('PULP_BASE_URL', trailingslashit( get_bloginfo('template_url') ));
+	define ('PVLP_BASE_URL', trailingslashit( get_bloginfo('template_url') ));
 else:
-	define ('PULP_BASE_URL', plugin_dir_url( dirname(__FILE__) )); // Inside 'code' folder, so go up one folder.
+	define ('PVLP_BASE_URL', plugin_dir_url( dirname(__FILE__) )); // Inside 'code' folder, so go up one folder.
 endif;
 
 
 // Assets base URL
-define ('PULP_BASE_ASSETS_URL', PULP_BASE_URL. (PULP_SITE_TESTING ? 'assets/dev/' : 'assets/prod/'));
+define ('PVLP_BASE_ASSETS_URL', PVLP_BASE_URL. (PVLP_SITE_TESTING ? 'assets/dev/' : 'assets/prod/'));
 
 // CSS URL
-define ('PULP_BASE_CSS_URL', PULP_BASE_ASSETS_URL. 'css/');
+define ('PVLP_BASE_CSS_URL', PVLP_BASE_ASSETS_URL. 'css/');
 
 // JS URL
-define ('PULP_BASE_JS_URL', PULP_BASE_ASSETS_URL. 'js/');
+define ('PVLP_BASE_JS_URL', PVLP_BASE_ASSETS_URL. 'js/');
 
 // IMAGES URL
-define ('PULP_BASE_IMAGES_URL', PULP_BASE_ASSETS_URL. 'images/');
-define ('PULP_BASE_CORE_IMAGES_URL', PULP_BASE_IMAGES_URL. 'core/');
+define ('PVLP_BASE_IMAGES_URL', PVLP_BASE_ASSETS_URL. 'images/');
+define ('PVLP_BASE_CORE_IMAGES_URL', PVLP_BASE_IMAGES_URL. 'core/');
 
 
 
-require_once(PULP_CODE_PATH. 'base/defines.php');
-require_once(PULP_CODE_PATH_STIR);
-require_once(PULP_CODE_PATH_GLAZE);
-require_once(PULP_CODE_PATH_INFO);
-require_once(PULP_CODE_PATH_CACHE);
+require_once(PVLP_CODE_PATH. 'base/defines.php');
+require_once(PVLP_CODE_PATH_STIR);
+require_once(PVLP_CODE_PATH_GLAZE);
+require_once(PVLP_CODE_PATH_INFO);
+require_once(PVLP_CODE_PATH_CACHE);
 
-require_once(PULP_CODE_PATH_INIT);
-require_once(PULP_CODE_PATH_QUERY);
-require_once(PULP_CODE_PATH_DISPLAY_BASE);
-require_once(PULP_CODE_PATH_DISPLAY_SHORTCODE);
-require_once(PULP_CODE_PATH_CLASS_PAGE_DISPLAYER);
+require_once(PVLP_CODE_PATH_INIT);
+require_once(PVLP_CODE_PATH_QUERY);
+require_once(PVLP_CODE_PATH_DISPLAY_BASE);
+require_once(PVLP_CODE_PATH_DISPLAY_SHORTCODE);
+require_once(PVLP_CODE_PATH_CLASS_PAGE_DISPLAYER);
