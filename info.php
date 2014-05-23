@@ -12,6 +12,17 @@ function pvlpGetInPageURLToSectionWithID($sectionID)
 }
 
 
+function pvlpGetAllUserOrderedPostsOfType($postType)
+{
+	return get_posts(array(
+		'post_type' => $postType,
+		'numberposts' => -1,
+		'orderby' => 'menu_order',
+		'order' => 'ASC'
+	));
+}
+
+
 function pvlpGetAllPostsOfTypeInCustomCategoryWithSlug($postType, $categoryType, $categorySlug)
 {
 	return get_posts(array(

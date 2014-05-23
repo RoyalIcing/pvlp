@@ -6,8 +6,6 @@ Copyright 2014 Patrick Smith
 */
 
 
-define ('PVLP_PAGE_ID_META_KEY', 'pvlp-page-id');
-
 
 class PvlpPageDisplayer
 {
@@ -115,6 +113,18 @@ Modernizr.load({
 	public function displayPageFooter()
 	{
 		get_footer();
+	}
+	
+	public function displayFooterLegals()
+	{
+		$this->displayCopyright();
+	}
+	
+	public function displayCopyright()
+	{
+		if (defined('PVLP_COPYRIGHT_MESSAGE')):
+			glazyElement('h6.copyright', PVLP_COPYRIGHT_MESSAGE);
+		endif;
 	}
 	
 	public function displayFooterMenuContents()

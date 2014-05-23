@@ -53,7 +53,7 @@ stirring('header', 'start');
 wp_head();
 stirring('header', 'wp_head');
 
-if (PVLP_ENABLE_TYPEKIT):
+if (defined('PVLP_ENABLE_TYPEKIT') && PVLP_ENABLE_TYPEKIT):
 	pvlpDisplayTypekitScripts();
 endif;
 

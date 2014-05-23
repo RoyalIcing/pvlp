@@ -49,7 +49,7 @@ require_once(PVLP_CODE_PATH_INFO);
 require_once(PVLP_CODE_PATH_CACHE);
 
 require_once(PVLP_CODE_PATH_INIT);
-require_once(PVLP_CODE_PATH_QUERY);
+//require_once(PVLP_CODE_PATH_QUERY);
 require_once(PVLP_CODE_PATH_DISPLAY_BASE);
 require_once(PVLP_CODE_PATH_DISPLAY_SHORTCODE);
 require_once(PVLP_CODE_PATH_CLASS_PAGE_DISPLAYER);

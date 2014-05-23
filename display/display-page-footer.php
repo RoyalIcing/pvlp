@@ -19,24 +19,16 @@ stirring('footer', 'banner');
 <footer id="footer">
 <div class="content">
 <?php
-if (defined('PVLP_COPYRIGHT_MESSAGE')):
-	glazyElement('h6.copyright', PVLP_COPYRIGHT_MESSAGE);
-endif;
+	// Legals, Copyright
+	$pageDisplayer->displayFooterLegals();
 
-if (false):
-	require_once (PVLP_CODE_PATH_DISPLAY_MENU);
-	pvlpDisplayMenuNavigation('legalsMenu', 'legalsMenu', 'h6');
-	stirring('footer', 'legals menu');
-endif;
-
-if (true):
+	// Footer Navigation
 	$mainNavigation = glazyBegin('nav#footerNavigation');
 	{
 		$pageDisplayer->displayFooterMenuContents();
 	}
 	glazyClose($mainNavigation);
 	stirring('header', 'main navigation');
-endif;
 ?>
 </div>
 </footer>
