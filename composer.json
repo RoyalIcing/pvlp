@@ -1,0 +1,9 @@
+{
+    "require": {
+        "burntcaramel/glaze": "1.6.*",
+		"burntcaramel/stir": "1.0.*"
+    },
+    "config" : {
+        "vendor-dir" : "libraries"
+    }
+}
