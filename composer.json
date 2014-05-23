@@ -1,7 +1,7 @@
 {
 	"name": "burntcaramel/pvlp",
 	"description": "Base files for creating a WordPress theme.",
-	"keywords": ["wordpress", "theme", "base"],
+	"keywords": ["wordpress", "theme", "base", "single", "one page", "single page"],
 	"license": "MIT",
     "require": {
 		"php": ">=5.3.0",
