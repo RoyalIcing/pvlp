@@ -27,9 +27,9 @@ define ('PVLP_CODE_PATH_DISPLAY_PAGE_FOOTER', PVLP_CODE_PATH. 'display/display-p
 // Libraries
 define ('PVLP_CODE_LIBRARIES_PATH', PVLP_CODE_PATH. 'libraries/');
 
-define ('PVLP_CODE_PATH_GLAZE', PVLP_CODE_LIBRARIES_PATH. 'glaze/glaze.php');
-define ('PVLP_CODE_PATH_PERFORATED', PVLP_CODE_LIBRARIES_PATH. 'perforated/src/perforated.php');
-define ('PVLP_CODE_PATH_STIR', PVLP_CODE_LIBRARIES_PATH. 'stir/stir.php');
+define ('PVLP_CODE_PATH_GLAZE', PVLP_CODE_LIBRARIES_PATH. 'burntcaramel/glaze/glaze.php');
+//define ('PVLP_CODE_PATH_PERFORATED', PVLP_CODE_LIBRARIES_PATH. 'burntcaramel/perforated/src/perforated.php');
+define ('PVLP_CODE_PATH_STIR', PVLP_CODE_LIBRARIES_PATH. 'burntcaramel/stir/stir.php');
 
 
 

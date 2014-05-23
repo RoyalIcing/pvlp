@@ -1,0 +1,88 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "2e778381994a33275f52297317b259ef",
+    "packages": [
+        {
+            "name": "burntcaramel/glaze",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BurntCaramel/glaze.git",
+                "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BurntCaramel/glaze/zipball/2c7641a8713cc39053003dc05105162fbb8ef5f3",
+                "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Easy to use functions for displaying HTML attributes & elements, escaping text, URLs, email addresses.",
+            "keywords": [
+                "Escape",
+                "display",
+                "escaping",
+                "html",
+                "text"
+            ],
+            "time": "2014-05-12 11:55:33"
+        },
+        {
+            "name": "burntcaramel/stir",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BurntCaramel/stir.git",
+                "reference": "c84f45eb211b8c89aa3d88e2f4e6d98ce627817e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BurntCaramel/stir/zipball/c84f45eb211b8c89aa3d88e2f4e6d98ce627817e",
+                "reference": "c84f45eb211b8c89aa3d88e2f4e6d98ce627817e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Record time taken in your website.",
+            "keywords": [
+                "benchmark",
+                "record",
+                "stir",
+                "time"
+            ],
+            "time": "2014-05-23 11:15:47"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
