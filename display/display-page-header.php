@@ -92,7 +92,7 @@ if (true):
 	{
 		$pageDisplayer->displayMainMenuContents();
 	}
-	glazyClose($mainNavigation);
+	glazyFinish($mainNavigation);
 	stirring('header', 'main navigation');
 endif;
 

@@ -1,39 +1,5 @@
 [
     {
-        "name": "burntcaramel/glaze",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/BurntCaramel/glaze.git",
-            "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/BurntCaramel/glaze/zipball/2c7641a8713cc39053003dc05105162fbb8ef5f3",
-            "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2014-05-12 11:55:33",
-        "type": "library",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "description": "Easy to use functions for displaying HTML attributes & elements, escaping text, URLs, email addresses.",
-        "keywords": [
-            "Escape",
-            "display",
-            "escaping",
-            "html",
-            "text"
-        ]
-    },
-    {
         "name": "burntcaramel/stir",
         "version": "1.0",
         "version_normalized": "1.0.0.0",
@@ -64,6 +30,42 @@
             "record",
             "stir",
             "time"
+        ]
+    },
+    {
+        "name": "burntcaramel/glaze",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/BurntCaramel/glaze.git",
+            "reference": "dc6849e04582a7de6a50df47304b42342461be5f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/BurntCaramel/glaze/zipball/dc6849e04582a7de6a50df47304b42342461be5f",
+            "reference": "dc6849e04582a7de6a50df47304b42342461be5f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2014-07-21 03:32:58",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Easy to use functions for displaying HTML attributes & elements, escaping text, URLs, email addresses.",
+        "keywords": [
+            "Escape",
+            "display",
+            "escaping",
+            "glaze",
+            "glazy",
+            "html",
+            "text"
         ]
     }
 ]

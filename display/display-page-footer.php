@@ -27,7 +27,7 @@ stirring('footer', 'banner');
 	{
 		$pageDisplayer->displayFooterMenuContents();
 	}
-	glazyClose($mainNavigation);
+	glazyFinish($mainNavigation);
 	stirring('header', 'main navigation');
 ?>
 </div>

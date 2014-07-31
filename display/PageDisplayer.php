@@ -171,10 +171,10 @@ Modernizr.load({
 		$options = $this->setUpDefaultOptionsForDisplaySection($options);
 		
 		if (!empty($options['addContentElement'])):
-			glazyClose();
+			glazyFinish();
 		endif;
 		
-		glazyClose();
+		glazyFinish();
 	}
 	
 	public function displaySectionForPageWithID($pageID)
@@ -187,7 +187,7 @@ Modernizr.load({
 		
 		
 		if (empty($foundPosts)):
-			glazyElement('p', 'No page found for '.$pageID);
+			//glazyElement('p', 'No page found for '.$pageID);
 			return false;
 		endif;
 		

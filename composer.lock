@@ -1,22 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "2e778381994a33275f52297317b259ef",
+    "hash": "a7f4e0d3b097001f9e35d6bb3a2a5c62",
     "packages": [
         {
             "name": "burntcaramel/glaze",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BurntCaramel/glaze.git",
-                "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3"
+                "reference": "dc6849e04582a7de6a50df47304b42342461be5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BurntCaramel/glaze/zipball/2c7641a8713cc39053003dc05105162fbb8ef5f3",
-                "reference": "2c7641a8713cc39053003dc05105162fbb8ef5f3",
+                "url": "https://api.github.com/repos/BurntCaramel/glaze/zipball/dc6849e04582a7de6a50df47304b42342461be5f",
+                "reference": "dc6849e04582a7de6a50df47304b42342461be5f",
                 "shasum": ""
             },
             "require": {
@@ -32,10 +33,12 @@
                 "Escape",
                 "display",
                 "escaping",
+                "glaze",
+                "glazy",
                 "html",
                 "text"
             ],
-            "time": "2014-05-12 11:55:33"
+            "time": "2014-07-21 03:32:58"
         },
         {
             "name": "burntcaramel/stir",
@@ -79,9 +82,10 @@
     "stability-flags": [
 
     ],
-    "platform": [
-
-    ],
+    "prefer-stable": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
     "platform-dev": [
 
     ]
